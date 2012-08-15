@@ -54,7 +54,7 @@ namespace Craft.Net.Server.Packets
         {
             if (Client.Entity.Position.DistanceTo(Position) > 6)
                 return;
-            if (HeldItem.Id < 0x80)
+            if (HeldItem.Id < 0x80 && HeldItem.Id >= 0)
             {
                 Block block = (Block)HeldItem.Id;
                 Vector3 clickedBlock = Position;
